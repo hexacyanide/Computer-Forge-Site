@@ -1,0 +1,450 @@
+/*
+	Any time you see: @media (min-width: 1100px)
+	That is for styles that only apply to viewports less than 1100px (mobile-styles)
+*/
+
+/* If viewport is too small, do not allow */
+#viewerror {
+	display: none;
+	text-align: center;
+	border-radius: 4px;
+	width: 100%;
+	background-color: rgba(255, 0, 0, 0.87);
+}
+
+@media (max-width: 310px) {
+	footer, #content {
+		display: none;
+	}
+	#viewerror {
+		display: block;
+	}
+}
+
+@media (max-width: 549px) {
+	#searchdiv {
+		display: none;
+	}
+}
+
+/* Base Styles */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+	background-color: white;
+	
+	height: 100%;
+	margin: 0 0 250px;
+	padding: 0;
+	
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: black;
+}
+
+#content {
+	max-width: 1200px;
+	height: auto;
+	min-height: 100%;
+	margin: 0 auto 0 auto;
+	position: relative;
+}
+
+#content:after {
+	content: "";
+	display: block;
+}
+
+footer {
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    
+    background: black;
+	background-color: black;
+}
+
+#footer {
+	height: 170px;
+	padding-top: 30px;
+	max-width: 1100px;
+	margin: 0 auto 0 auto;
+	
+	color: white;
+	background: black;
+	background-color: black;
+}
+
+a {
+	color: #cfb87c;
+	text-decoration: none;
+}
+
+h1 {
+	color: white;
+	font-size: 2.4em;
+	font-weight: 100;
+}
+
+h2 {
+	color: black;
+	font-size: 1.6em;
+}
+
+textarea {
+	box-sizing: border-box;
+	width: 100%;
+	height: 80px;
+	margin-bottom: 4px;
+	border-radius: 4px;
+	resize: none;
+}
+
+input[type="text"],input[type="password"] {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	height: 20px;
+	margin-bottom: 4px;
+	border-radius: 4px;
+}
+
+input[type="submit"] {
+	float: right;
+	margin-bottom: 8px;
+}
+
+hr {
+	clear: both;
+	margin-top: 26px;
+}
+
+.sp {
+	height: 4px;
+}
+
+/* Top Head Styles */
+
+.top {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto 0 auto;
+	padding-top: 10px;
+	position: relative;
+}
+
+.top::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background: black;
+  z-index: -1;
+}
+
+.top h1,img {
+	display: inline;
+	vertical-align: middle;
+}
+
+.top img {
+	width: 100px;
+	height: 90px;
+}
+
+.searchform {
+	float: right;
+	width: 20%;
+	padding-top: 22px;
+	margin: 0px;
+}
+
+.searchfield {
+	height: 30px !important;
+	width: 100% !important;
+	box-sizing: border-box;
+	border-radius: 0px !important;
+	
+	padding-left: 6px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.searchmini {
+	color: white;
+	font-size: 0.8em;
+	text-align: right;
+	
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Menu Styles */
+
+@media (max-width: 480px) {
+	.top h1 {
+		font-size: 1.8em;
+	}
+	.top img {
+		width: 80px;
+		height: 80px;
+	}
+}
+
+@media (max-width: 370px) {
+	.top h1,img {
+		font-size: 1.2em;
+	}
+	.top img {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.menu {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 10px 0px;
+	position: relative;
+}
+
+.menu::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background: #A2A4A3;
+  z-index: -1;
+}
+
+.menulist {
+	width: 100%;
+	padding-left: 0;
+	margin: 0;
+}
+
+.menulist > li {
+	display: block;
+	float: none;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.menulist > li > a {
+	display: block;
+}
+
+@media (min-width: 615px) {
+	.menulist > li {
+		display: table-cell;
+		width: 1%;
+	}
+}
+
+/* Menu Button Styles */
+
+.menubtn {
+	color: black;
+	border: 1px solid transparent;
+	border-color: black;
+	border-radius: 4px;
+	
+	padding: 6px 12px 7px 12px;
+	text-align: center;
+	
+	cursor: pointer;
+	transition: background-color .5s;
+	transition: color .5s;
+	touch-action: manipulation;
+	
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.menubtn:hover {
+	background-color: #cfb87c;
+}
+
+.logoutbtn {
+	color: white;
+	background-color: black;
+}
+
+.logoutbtn:hover {
+	color: black;
+}
+
+/* Page Styles */
+
+.pagedisplay {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto 0 auto;
+	padding: 2px 0px;
+	position: relative;
+}
+
+.pagedisplay li {
+	margin: 8px 0px;
+}
+
+/* Grid System */
+
+.row {
+	box-sizing: border-box;
+	margin: 5px 0;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.col-15 {
+	box-sizing: border-box;
+	position: relative;
+    float: left;
+    min-height: 1px;
+    width: 15%;
+}
+
+.col-30 {
+	box-sizing: border-box;
+	position: relative;
+    float: left;
+    min-height: 1px;
+    width: 30%;
+}
+
+.col-40 {
+	box-sizing: border-box;
+	position: relative;
+    float: left;
+    min-height: 1px;
+    width: 40%;
+}
+
+.col-50 {
+	box-sizing: border-box;
+	position: relative;
+    float: left;
+    min-height: 1px;
+    width: 50%;
+    
+    padding: 0 10px;
+}
+
+.col-60 {
+	box-sizing: border-box;
+	position: relative;
+    float: left;
+    min-height: 1px;
+    width: 60%;
+}
+
+.col-70 {
+	box-sizing: border-box;
+	position: relative;
+    float: left;
+    min-height: 1px;
+    width: 70%;
+    
+    padding: 0 14px;
+}
+
+.col-100 {
+	box-sizing: border-box;
+	position: relative;
+    float: left;
+    min-height: 1px;
+    width: 100%;
+    
+    padding: 0 10px;
+}
+
+/* Mobile Size */
+
+@media screen and (max-width: 720px) {
+	#content { width: 96%; }
+	
+	.col-15 {
+		float: none;
+	    min-height: 1px;
+	    width: auto;
+	}
+	
+	.col-30 {
+		float: none;
+	    min-height: 1px;
+	    width: auto;
+	}
+	
+	.col-40 {
+		float: none;
+	    min-height: 1px;
+	    width: auto;
+	    padding-left: 10px;
+	}
+	
+	.col-50 {
+		float: none;
+	    min-height: 1px;
+	    width: auto;
+	}
+	
+	.col-60 {
+		float: none;
+	    min-height: 1px;
+	    width: auto;
+	    padding-left: 10px;
+	}
+	
+	.col-70 {
+		float: none;
+	    min-height: 1px;
+	    width: auto;
+	    
+	    margin: 0;
+	    padding: 0;
+	}
+	
+	.col-100 {
+		float: none;
+	    min-height: 1px;
+	    width: auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
